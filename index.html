@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberFortis | Cyber Security Solutions</title>
+  <style>
+    :root {
+      --bg: #0b0e13;
+      --accent: #00e0ff;
+      --text: #e6e6e6;
+      --muted: #8a8a8a;
+    }
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .content h2 {
+      color: var(--accent);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .content p {
+      margin-bottom: 1.5rem;
+    }
+    .contact {
+      background: #11151b;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 20px;
+    }
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 8px;
+      padding: 5px 10px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <button class="lang-toggle" onclick="toggleLang()">EN</button>
+  <header>
+    <h1>CyberFortis</h1>
+    <p id="tagline">Vaš partner u zaštiti digitalnih sustava i podataka.</p>
+  </header>
+
+  <div class="content">
+    <h2 id="services-title">Naše usluge i proizvodi</h2>
+    <p id="services-text">
+      CyberFortis pruža sveobuhvatna rješenja iz područja cyber sigurnosti: testiranje ranjivosti, sigurnosne audite, 
+      razvoj sigurnosnih politika, te implementaciju zaštitnih sustava. 
+      Naši proizvodi pomažu organizacijama u prevenciji napada i sigurnom upravljanju podacima.
+    </p>
+
+    <h2 id="mission-title">Naša misija</h2>
+    <p id="mission-text">
+      Naš cilj je ojačati otpornost Vašeg poslovanja na cyber prijetnje kroz inovativna, skalabilna i učinkovita sigurnosna rješenja.
+    </p>
+  </div>
+
+  <div class="contact">
+    <h2 id="contact-title">Kontakt</h2>
+    <p id="contact-text">Za više informacija, kontaktirajte nas putem e-mail adrese: 
+      <a href="mailto:info@cyberfortis.hr">info@cyberfortis.hr</a>
+    </p>
+  </div>
+
+  <footer>
+    © 2025 CyberFortis — All rights reserved.
+  </footer>
+
+  <script>
+    const langData = {
+      hr: {
+        tagline: "Vaš partner u zaštiti digitalnih sustava i podataka.",
+        servicesTitle: "Naše usluge i proizvodi",
+        servicesText: "CyberFortis pruža sveobuhvatna rješenja iz područja cyber sigurnosti: testiranje ranjivosti, sigurnosne audite, razvoj sigurnosnih politika, te implementaciju zaštitnih sustava. Naši proizvodi pomažu organizacijama u prevenciji napada i sigurnom upravljanju podacima.",
+        missionTitle: "Naša misija",
+        missionText: "Naš cilj je ojačati otpornost Vašeg poslovanja na cyber prijetnje kroz inovativna, skalabilna i učinkovita sigurnosna rješenja.",
+        contactTitle: "Kontakt",
+        contactText: "Za više informacija, kontaktirajte nas putem e-mail adrese:",
+      },
+      en: {
+        tagline: "Your partner in protecting digital systems and data.",
+        servicesTitle: "Our Services and Products",
+        servicesText: "CyberFortis provides comprehensive cybersecurity solutions: vulnerability testing, security audits, policy development, and implementation of protective systems. Our products help organizations prevent attacks and securely manage their data.",
+        missionTitle: "Our Mission",
+        missionText: "Our goal is to strengthen your business resilience against cyber threats through innovative, scalable, and effective security solutions.",
+        contactTitle: "Contact",
+        contactText: "For more information, contact us via email:",
+      }
+    };
+
+    let currentLang = 'hr';
+    function toggleLang() {
+      currentLang = currentLang === 'hr' ? 'en' : 'hr';
+      document.querySelector('.lang-toggle').innerText = currentLang === 'hr' ? 'EN' : 'HR';
+      document.getElementById('tagline').innerText = langData[currentLang].tagline;
+      document.getElementById('services-title').innerText = langData[currentLang].servicesTitle;
+      document.getElementById('services-text').innerText = langData[currentLang].servicesText;
+      document.getElementById('mission-title').innerText = langData[currentLang].missionTitle;
+      document.getElementById('mission-text').innerText = langData[currentLang].missionText;
+      document.getElementById('contact-title').innerText = langData[currentLang].contactTitle;
+      document.getElementById('contact-text').innerHTML = `${langData[currentLang].contactText} <a href="mailto:info@cyberfortis.hr">info@cyberfortis.hr</a>`;
+    }
+  </script>
+</body>
+</html>
