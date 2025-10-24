@@ -116,40 +116,6 @@ USKORO VIŠE!
     © 2025 CYBERFORTIS — All rights reserved.
   </footer>
 
-  <script>
-    const langData = {
-      hr: {
-        tagline: "Vaš partner u zaštiti digitalnih sustava i podataka.",
-        servicesTitle: "Naše usluge i proizvodi",
-        servicesText: "CyberFortis pruža sveobuhvatna rješenja iz područja cyber sigurnosti: testiranje ranjivosti, sigurnosne audite, razvoj sigurnosnih politika, te implementaciju zaštitnih sustava. Naši proizvodi pomažu organizacijama u prevenciji napada i sigurnom upravljanju podacima.",
-        missionTitle: "Naša misija",
-        missionText: "Naš cilj je ojačati otpornost Vašeg poslovanja na cyber prijetnje kroz inovativna, skalabilna i učinkovita sigurnosna rješenja.",
-        contactTitle: "Kontakt",
-        contactText: "Za više informacija, kontaktirajte nas putem e-mail adrese:",
-      },
-      en: {
-        tagline: "Your partner in protecting digital systems and data.",
-        servicesTitle: "Our Services and Products",
-        servicesText: "CyberFortis provides comprehensive cybersecurity solutions: vulnerability testing, security audits, policy development, and implementation of protective systems. Our products help organizations prevent attacks and securely manage their data.",
-        missionTitle: "Our Mission",
-        missionText: "Our goal is to strengthen your business resilience against cyber threats through innovative, scalable, and effective security solutions.",
-        contactTitle: "Contact",
-        contactText: "For more information, contact us via email:",
-      }
-    };
-
-    let currentLang = 'hr';
-    function toggleLang() {
-      currentLang = currentLang === 'hr' ? 'en' : 'hr';
-      document.querySelector('.lang-toggle').innerText = currentLang === 'hr' ? 'EN' : 'HR';
-      document.getElementById('tagline').innerText = langData[currentLang].tagline;
-      document.getElementById('services-title').innerText = langData[currentLang].servicesTitle;
-      document.getElementById('services-text').innerText = langData[currentLang].servicesText;
-      document.getElementById('mission-title').innerText = langData[currentLang].missionTitle;
-      document.getElementById('mission-text').innerText = langData[currentLang].missionText;
-      document.getElementById('contact-title').innerText = langData[currentLang].contactTitle;
-      document.getElementById('contact-text').innerHTML = `${langData[currentLang].contactText} <a href="mailto:info@cyberfortis.hr">info@cyberfortis.hr</a>`;
-    }
-  </script>
+  
 </body>
 </html>
